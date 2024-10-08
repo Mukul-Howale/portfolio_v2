@@ -1,5 +1,5 @@
-import Layout from '../components/Layout'
-import ProjectGrid from '../components/ProjectGrid'
+import Layout from '../../components/Layout'
+import ProjectGrid from '../../components/ProjectGrid'
 
 export default function ProjectsPage() {
   return (
