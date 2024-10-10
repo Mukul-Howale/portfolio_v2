@@ -1,4 +1,6 @@
-import { GitHub, LinkedIn, Twitter } from 'lucide-react'
+'use client'
+
+import { GithubIcon, Linkedin, X } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -11,13 +13,13 @@ export default function Footer() {
           </div>
           <div className="flex space-x-4">
             <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
-              <GitHub />
+              <GithubIcon />
             </a>
             <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
-              <LinkedIn />
+              <Linkedin />
             </a>
             <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary">
-              <Twitter />
+              <X />
             </a>
           </div>
         </div>

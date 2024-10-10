@@ -1,9 +1,8 @@
-import Layout from '../../components/Layout'
-import ContactForm from '../../components/ContactForm'
+import ContactForm from '@/components/ContactForm'
 
 export default function ContactPage() {
   return (
-    <Layout>
+    <>
       <div className="pt-20 bg-gray-900">
         <div className="max-w-screen-xl mx-auto px-4 py-16">
           <h1 className="text-5xl font-bold mb-8 text-center">Contact Me</h1>
@@ -32,6 +31,6 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
-    </Layout>
+    </>
   )
 }
