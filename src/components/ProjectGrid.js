@@ -1,4 +1,6 @@
-import ProjectCard from './ProjectCard'
+'use client'
+
+import ProjectCard from '@/components/ProjectCard'
 
 export default function ProjectGrid() {
   const projects = [
