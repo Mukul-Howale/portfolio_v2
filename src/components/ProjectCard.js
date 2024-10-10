@@ -1,8 +1,15 @@
+'use client'
+
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 export default function ProjectCard({ title, description, image, technologies, link }) {
   return (
-    <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
+    <motion.div
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.3 }}
+      className="bg-gray-800 rounded-lg overflow-hidden shadow-lg"
+    >
       <Image src={image} alt={title} width={400} height={200} className="w-full object-cover h-48" />
       <div className="p-6">
         <h3 className="text-xl font-semibold mb-2">{title}</h3>
@@ -23,6 +30,6 @@ export default function ProjectCard({ title, description, image, technologies, l
           View Project
         </a>
       </div>
-    </div>
+    </motion.div>
   )
 }
