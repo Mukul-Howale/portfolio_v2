@@ -19,12 +19,12 @@ export default function AnimatedSkills() {
         <div key={skill.name} className="relative pt-1">
           <div className="flex mb-2 items-center justify-between">
             <div>
-              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-primary bg-primary bg-opacity-20">
+              <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-text-light dark:text-text-dark bg-primary bg-opacity-20">
                 {skill.name}
               </span>
             </div>
             <div className="text-right">
-              <span className="text-xs font-semibold inline-block text-primary">
+              <span className="text-xs font-semibold inline-block text-text-light dark:text-text-dark">
                 {skill.level}%
               </span>
             </div>

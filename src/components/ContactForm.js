@@ -22,12 +22,12 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="py-20 bg-gray-900">
+    <section className="py-20 bg-background-light dark:bg-background-dark">
       <div className="max-w-screen-xl mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-8 text-center">Get in Touch</h2>
+        <h2 className="text-4xl font-bold mb-8 text-center text-text-light dark:text-text-dark">Get in Touch</h2>
         <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
           <div className="mb-4">
-            <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
+            <label htmlFor="name" className="block text-sm font-medium mb-2 text-text-light dark:text-text-dark">Name</label>
             <input
               type="text"
               id="name"
@@ -35,11 +35,11 @@ export default function ContactForm() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-3 py-2 bg-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full px-3 py-2 bg-background-dark dark:bg-background-light text-text-dark dark:text-text-light rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
+            <label htmlFor="email" className="block text-sm font-medium mb-2 text-text-light dark:text-text-dark">Email</label>
             <input
               type="email"
               id="email"
@@ -47,11 +47,11 @@ export default function ContactForm() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-3 py-2 bg-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full px-3 py-2 bg-background-dark dark:bg-background-light text-text-dark dark:text-text-light rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
+            <label htmlFor="message" className="block text-sm font-medium mb-2 text-text-light dark:text-text-dark">Message</label>
             <textarea
               id="message"
               name="message"
@@ -59,7 +59,7 @@ export default function ContactForm() {
               onChange={handleChange}
               required
               rows="4"
-              className="w-full px-3 py-2 bg-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full px-3 py-2 bg-background-dark dark:bg-background-light text-text-dark dark:text-text-light rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
             ></textarea>
           </div>
           <button

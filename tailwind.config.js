@@ -14,12 +14,10 @@ module.exports = {
           dark: '#000000',
         },
         text: {
-          light: '#1A1A1A',
-          dark: '#E0E0E0',
+          light: '#000000',
+          dark: '#FFFFFF',
         },
-        'gray-700': '#2A2A2A',
-        'gray-800': '#1A1A1A',
-        'gray-400': '#A0A0A0',
+        primary: '#3B82F6', // Blue color for primary elements
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

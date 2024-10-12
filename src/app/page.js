@@ -6,7 +6,7 @@ import ContactForm from '@/components/ContactForm'
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-background-light dark:bg-background-dark">
       <Hero />
       <About />
       <ProjectGrid />

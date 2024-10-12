@@ -29,27 +29,27 @@ export default function Navbar() {
         {navItems.map((item) => (
           <DockIcon key={item.name}>
             <Link href={item.href} className="flex flex-col items-center justify-center w-full h-full">
-              <item.icon className="w-6 h-6 mb-1 text-gray-800 dark:text-gray-200" />
-              <span className="text-xs text-gray-800 dark:text-gray-200"></span>
+              <item.icon className="w-6 h-6 mb-1 text-text-light dark:text-text-dark" />
+              <span className="text-xs text-text-light dark:text-text-dark"></span>
             </Link>
           </DockIcon>
         ))}
         {socialItems.map((item) => (
           <DockIcon key={item.name}>
             <a href={item.href} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center w-full h-full">
-              <item.icon className="w-6 h-6 mb-1 text-gray-800 dark:text-gray-200" />
-              <span className="text-xs text-gray-800 dark:text-gray-200"></span>
+              <item.icon className="w-6 h-6 mb-1 text-text-light dark:text-text-dark" />
+              <span className="text-xs text-text-light dark:text-text-dark"></span>
             </a>
           </DockIcon>
         ))}
         <DockIcon>
           <button onClick={toggleTheme} className="flex flex-col items-center justify-center w-full h-full">
             {theme === 'dark' ? (
-              <Sun className="w-6 h-6 mb-1 text-gray-200" />
+              <Sun className="w-6 h-6 mb-1 text-text-dark" />
             ) : (
-              <Moon className="w-6 h-6 mb-1 text-gray-800" />
+              <Moon className="w-6 h-6 mb-1 text-text-light" />
             )}
-            <span className="text-xs text-gray-800 dark:text-gray-200"></span>
+            <span className="text-xs text-text-light dark:text-text-dark"></span>
           </button>
         </DockIcon>
       </Dock>
