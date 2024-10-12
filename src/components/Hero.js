@@ -20,14 +20,6 @@ export default function Hero() {
 
   return (
     <div className="relative h-screen flex items-center justify-center overflow-hidden bg-background-light dark:bg-background-dark">
-      {/* Theme-aware Ripple background */}
-      <Ripple 
-        mainCircleSize={300}
-        mainCircleOpacity={0.1}
-        numCircles={5}
-        className="absolute inset-0"
-      />
-      
       <div className="z-10 text-center">
         <motion.div
           initial={{ y: -20, opacity: 0 }}
@@ -68,6 +60,7 @@ export default function Hero() {
           Get in Touch
         </motion.a>
       </div>
+      <Ripple />
     </div>
   )
 }
