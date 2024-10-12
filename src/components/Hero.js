@@ -2,10 +2,32 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import Ripple from './Ripple'  // Make sure this path is correct
+import { useTheme } from 'next-themes'
+import { useEffect, useState } from 'react'
 
 export default function Hero() {
+  const { theme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
+
   return (
     <div className="relative h-screen flex items-center justify-center overflow-hidden bg-background-light dark:bg-background-dark">
+      {/* Theme-aware Ripple background */}
+      <Ripple 
+        mainCircleSize={300}
+        mainCircleOpacity={0.1}
+        numCircles={5}
+        className="absolute inset-0"
+      />
+      
       <div className="z-10 text-center">
         <motion.div
           initial={{ y: -20, opacity: 0 }}
@@ -41,7 +63,7 @@ export default function Hero() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-          className="bg-background-dark dark:bg-background-light text-text-dark dark:text-text-light font-bold py-3 px-6 rounded-full transition duration-300"
+          className="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-6 rounded-full transition duration-300"
         >
           Get in Touch
         </motion.a>
