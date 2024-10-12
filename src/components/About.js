@@ -11,12 +11,12 @@ export default function About() {
           <div>
             <h3 className="text-2xl font-semibold mb-4 text-text-light dark:text-text-dark">Who I Am</h3>
             <p className="text-text-light dark:text-text-dark mb-4">
-              I'm a passionate software developer with a keen interest in building scalable web applications.
+              I&apos;m a passionate software developer with a keen interest in building scalable web applications.
               With a background in computer science and years of industry experience, I love tackling complex
               problems and turning ideas into reality through code.
             </p>
             <p className="text-text-light dark:text-text-dark">
-              When I'm not coding, you can find me exploring new technologies, contributing to open-source
+              When I&apos;m not coding, you can find me exploring new technologies, contributing to open-source
               projects, or enjoying the great outdoors.
             </p>
           </div>
