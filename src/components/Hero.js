@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 export default function Hero() {
   return (
-    <div className="relative h-screen flex items-center justify-center overflow-hidden">
+    <div className="relative h-screen flex items-center justify-center overflow-hidden bg-background">
       <div className="z-10 text-center">
         <motion.div
           initial={{ y: -20, opacity: 0 }}

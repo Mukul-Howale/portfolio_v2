@@ -1,38 +1,58 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
+import { useTheme } from 'next-themes'
+import { Home, User, Briefcase, Mail, Sun, Moon, Github } from 'lucide-react'
+import { Dock, DockIcon } from './Dock'
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
+  const { theme, setTheme } = useTheme()
+
+  const navItems = [
+    { name: 'Home', icon: Home, href: '/' },
+    { name: 'About', icon: User, href: '/about' },
+    { name: 'Projects', icon: Briefcase, href: '/projects' },
+    { name: 'Contact', icon: Mail, href: '/contact' },
+  ]
+
+  const socialItems = [
+    { name: 'GitHub', icon: Github, href: 'https://github.com/yourusername' },
+  ]
+
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark')
+  }
 
   return (
-    <nav className="bg-background/80 backdrop-blur-md fixed w-full z-20 top-0 left-0">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <Link href="/" className="flex items-center">
-          <span className="self-center text-2xl font-semibold whitespace-nowrap">Your Name</span>
-        </Link>
-        <button 
-          onClick={() => setIsOpen(!isOpen)} 
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200"
-        >
-          <span className="sr-only">Open main menu</span>
-          <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
-          </svg>
-        </button>
-        <div className={`${isOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`}>
-          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
-            {['Home', 'About', 'Projects', 'Contact'].map((item) => (
-              <li key={item}>
-                <Link href={item === 'Home' ? '/' : `/${item.toLowerCase()}`} className="block py-2 pl-3 pr-4 rounded hover:bg-gray-700 md:hover:bg-transparent md:hover:text-primary md:p-0">
-                  {item}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
+    <nav className="fixed top-8 left-1/2 transform -translate-x-1/2 z-20">
+      <Dock direction="middle">
+        {navItems.map((item) => (
+          <DockIcon key={item.name}>
+            <Link href={item.href} className="flex flex-col items-center justify-center w-full h-full">
+              <item.icon className="w-6 h-6 mb-1 text-gray-800 dark:text-gray-200" />
+              <span className="text-xs text-gray-800 dark:text-gray-200"></span>
+            </Link>
+          </DockIcon>
+        ))}
+        {socialItems.map((item) => (
+          <DockIcon key={item.name}>
+            <a href={item.href} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center w-full h-full">
+              <item.icon className="w-6 h-6 mb-1 text-gray-800 dark:text-gray-200" />
+              <span className="text-xs text-gray-800 dark:text-gray-200"></span>
+            </a>
+          </DockIcon>
+        ))}
+        <DockIcon>
+          <button onClick={toggleTheme} className="flex flex-col items-center justify-center w-full h-full">
+            {theme === 'dark' ? (
+              <Sun className="w-6 h-6 mb-1 text-gray-200" />
+            ) : (
+              <Moon className="w-6 h-6 mb-1 text-gray-800" />
+            )}
+            <span className="text-xs text-gray-800 dark:text-gray-200"></span>
+          </button>
+        </DockIcon>
+      </Dock>
     </nav>
   )
 }
