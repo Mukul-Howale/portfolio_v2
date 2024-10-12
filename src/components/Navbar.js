@@ -16,11 +16,7 @@ export default function Navbar() {
     { name: 'Projects', icon: Briefcase, href: '#projects' },
     { name: 'Contact', icon: Mail, href: '#contact' },
   ]
-
-  const socialItems = [
-    { name: 'GitHub', icon: Github, href: 'https://github.com/yourusername' },
-  ]
-
+  
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark')
   }
@@ -47,29 +43,14 @@ export default function Navbar() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-20 transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="flex justify-center py-4">
-        <Dock
-          direction="middle"
-          className={`shadow-md dark:shadow-[0_4px_6px_-1px_rgba(255,255,255,0.1),0_2px_4px_-1px_rgba(255,255,255,0.06)] bg-white/80 dark:bg-black/80 backdrop-blur-sm`}
+        <Dock direction="middle"
+          className={`shadow-md dark:shadow-[0_4px_6px_-1px_rgba(255,255,255,0.1),0_2px_4px_-1px_rgba(255,255,255,0.06)] bg-white/80 dark:bg-black/80 backdrop-blur-sm border-0 dark:border-0`}
         >
           {navItems.map((item) => (
             <DockIcon key={item.name} className="group">
               <a
                 href={item.href}
                 onClick={(e) => scrollToSection(e, item.href)}
-                className="flex flex-col items-center justify-center w-full h-full relative"
-              >
-                <div className="absolute inset-0 bg-gray-200 dark:bg-gray-700 opacity-0 group-hover:opacity-50 rounded-full transition-opacity duration-300"></div>
-                <item.icon className="w-6 h-6 mb-1 text-gray-800 dark:text-gray-200 relative z-10" />
-                <span className="text-xs text-gray-800 dark:text-gray-200 relative z-10"></span>
-              </a>
-            </DockIcon>
-          ))}
-          {socialItems.map((item) => (
-            <DockIcon key={item.name} className="group">
-              <a
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="flex flex-col items-center justify-center w-full h-full relative"
               >
                 <div className="absolute inset-0 bg-gray-200 dark:bg-gray-700 opacity-0 group-hover:opacity-50 rounded-full transition-opacity duration-300"></div>
