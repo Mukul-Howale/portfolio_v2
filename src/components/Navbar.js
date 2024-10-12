@@ -2,8 +2,12 @@
 
 import { useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
-import { Home, User, Briefcase, Mail, Sun, Moon, Github } from 'lucide-react'
+import { Home, User, Briefcase, Mail, Sun, Moon, Github, Linkedin, FileText } from 'lucide-react'
 import { Dock, DockIcon } from './Dock'
+
+const Separator = () => (
+  <div className="w-px h-8 bg-gray-300 dark:bg-gray-700 mx-2"></div>
+);
 
 export default function Navbar() {
   const { theme, setTheme } = useTheme()
@@ -16,7 +20,13 @@ export default function Navbar() {
     { name: 'Projects', icon: Briefcase, href: '#projects' },
     { name: 'Contact', icon: Mail, href: '#contact' },
   ]
-  
+
+  const socialItems = [
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/in/yourusername' },
+    { name: 'Resume', icon: FileText, href: '/path-to-your-resume.pdf' },
+    { name: 'GitHub', icon: Github, href: 'https://github.com/yourusername' },
+  ]
+
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark')
   }
@@ -43,7 +53,8 @@ export default function Navbar() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-20 transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="flex justify-center py-4">
-        <Dock direction="middle"
+        <Dock
+          direction="middle"
           className={`shadow-md dark:shadow-[0_4px_6px_-1px_rgba(255,255,255,0.1),0_2px_4px_-1px_rgba(255,255,255,0.06)] bg-white/80 dark:bg-black/80 backdrop-blur-sm border-0 dark:border-0`}
         >
           {navItems.map((item) => (
@@ -59,6 +70,22 @@ export default function Navbar() {
               </a>
             </DockIcon>
           ))}
+          <Separator />
+          {socialItems.map((item) => (
+            <DockIcon key={item.name} className="group">
+              <a
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center justify-center w-full h-full relative"
+              >
+                <div className="absolute inset-0 bg-gray-200 dark:bg-gray-700 opacity-0 group-hover:opacity-50 rounded-full transition-opacity duration-300"></div>
+                <item.icon className="w-6 h-6 mb-1 text-gray-800 dark:text-gray-200 relative z-10" />
+                <span className="text-xs text-gray-800 dark:text-gray-200 relative z-10"></span>
+              </a>
+            </DockIcon>
+          ))}
+          <Separator />
           <DockIcon className="group">
             <button
               onClick={toggleTheme}
