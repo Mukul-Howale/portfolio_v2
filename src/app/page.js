@@ -6,11 +6,19 @@ import ContactForm from '@/components/ContactForm'
 
 export default function Home() {
   return (
-    <main className="bg-background-light dark:bg-background-dark">
-      <Hero />
-      <About />
-      <ProjectGrid />
-      <ContactForm />
+    <main>
+      <section id="home">
+        <Hero />
+      </section>
+      <section id="about">
+        <About />
+      </section>
+      <section id="projects">
+        <ProjectGrid />
+      </section>
+      <section id="contact">
+        <ContactForm />
+      </section>
     </main>
   )
 }
