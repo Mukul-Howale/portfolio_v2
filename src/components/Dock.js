@@ -7,7 +7,7 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 const DEFAULT_MAGNIFICATION = 60;
-const DEFAULT_DISTANCE = 140;
+const DEFAULT_DISTANCE = 100;
 
 const dockVariants = cva(
   "supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10 mx-auto mt-8 flex h-[58px] w-max gap-2 rounded-2xl p-2 backdrop-blur-md",
@@ -86,7 +86,7 @@ const DockIcon = ({
 
   let width = useSpring(widthSync, {
     mass: 0.1,
-    stiffness: 150,
+    stiffness: 120,
     damping: 12,
   });
 

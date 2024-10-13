@@ -1,21 +1,27 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import Ripple from './Ripple'  // Make sure this path is correct
+import Ripple from './Ripple'
 import { useTheme } from 'next-themes'
-import { useEffect, useState } from 'react'
+import HeroSkeleton from './HeroSkeleton'  // Import the new skeleton component
 
 export default function Hero() {
   const { theme } = useTheme()
-  const [mounted, setMounted] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    setMounted(true)
+    // Simulate loading delay (remove this in production and replace with actual loading logic)
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 1000)
+
+    return () => clearTimeout(timer)
   }, [])
 
-  if (!mounted) {
-    return null
+  if (isLoading) {
+    return <HeroSkeleton />
   }
 
   return (
@@ -40,7 +46,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="text-5xl font-bold mb-4 text-text-light dark:text-text-dark"
         >
-          Your Name
+          Mukul Howale
         </motion.h1>
         <motion.p
           initial={{ y: 20, opacity: 0 }}
@@ -48,7 +54,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           className="text-2xl mb-8 text-text-light dark:text-text-dark"
         >
-          Software Developer & Problem Solver
+          Software Developer
         </motion.p>
         <motion.a
           href="#contact"

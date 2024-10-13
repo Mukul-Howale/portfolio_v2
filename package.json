@@ -19,6 +19,7 @@
     "portfolio_v2": "file:",
     "react": "^18",
     "react-dom": "^18",
+    "react-icon-cloud": "^4.1.4",
     "react-intersection-observer": "^9.13.1",
     "tailwind-merge": "^2.2.1"
   },
