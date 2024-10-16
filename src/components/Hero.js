@@ -1,26 +1,11 @@
 'use client'
 
-import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { useTheme } from 'next-themes'
-import HeroSkeleton from './HeroSkeleton'
 import { BlurFade } from './BlurFade'
 
 export default function Hero() {
   const { theme } = useTheme()
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false)
-    }, 1000)
-
-    return () => clearTimeout(timer)
-  }, [])
-
-  if (isLoading) {
-    return <HeroSkeleton />
-  }
 
   return (
     <div className="relative h-screen flex items-center justify-center overflow-hidden bg-background-light dark:bg-background-dark">
