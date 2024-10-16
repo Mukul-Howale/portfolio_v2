@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import Ripple from './Ripple'
 import { useTheme } from 'next-themes'
 import HeroSkeleton from './HeroSkeleton'  // Import the new skeleton component
 
@@ -66,7 +65,6 @@ export default function Hero() {
           Get in Touch
         </motion.a>
       </div>
-      <Ripple />
     </div>
   )
 }
