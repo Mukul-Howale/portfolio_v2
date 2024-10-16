@@ -55,7 +55,7 @@ export default function Navbar() {
           className={`shadow-md dark:shadow-[0_4px_6px_-1px_rgba(255,255,255,0.1),0_2px_4px_-1px_rgba(255,255,255,0.06)] bg-white/80 dark:bg-black/80 backdrop-blur-sm border-0 dark:border-0`}
         >
           {navItems.map((item) => (
-            <DockIcon key={item.name} className="group">
+            <DockIcon key={item.name} className="group relative">
               <a
                 href={item.href}
                 onClick={(e) => scrollToSection(e, item.href)}
@@ -63,13 +63,13 @@ export default function Navbar() {
               >
                 <div className="absolute inset-0 bg-gray-200 dark:bg-gray-700 opacity-0 group-hover:opacity-50 rounded-full transition-opacity duration-300"></div>
                 <item.icon className="w-6 h-6 mb-1 text-gray-800 dark:text-gray-200 relative z-10" />
-                <span className="text-xs text-gray-800 dark:text-gray-200 relative z-10"></span>
+                <span className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-gray-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">{item.name}</span>
               </a>
             </DockIcon>
           ))}
           <Separator />
           {socialItems.map((item) => (
-            <DockIcon key={item.name} className="group">
+            <DockIcon key={item.name} className="group relative">
               <a
                 href={item.href}
                 target="_blank"
@@ -78,12 +78,12 @@ export default function Navbar() {
               >
                 <div className="absolute inset-0 bg-gray-200 dark:bg-gray-700 opacity-0 group-hover:opacity-50 rounded-full transition-opacity duration-300"></div>
                 <item.icon className="w-6 h-6 mb-1 text-gray-800 dark:text-gray-200 relative z-10" />
-                <span className="text-xs text-gray-800 dark:text-gray-200 relative z-10"></span>
+                <span className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-gray-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">{item.name}</span>
               </a>
             </DockIcon>
           ))}
           <Separator />
-          <DockIcon className="group">
+          <DockIcon className="group relative">
             <button
               onClick={toggleTheme}
               className="flex flex-col items-center justify-center w-full h-full relative"
@@ -94,7 +94,9 @@ export default function Navbar() {
               ) : (
                 <Moon className="w-6 h-6 mb-1 text-gray-800 relative z-10" />
               )}
-              <span className="text-xs text-gray-800 dark:text-gray-200 relative z-10"></span>
+              <span className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-gray-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
+              </span>
             </button>
           </DockIcon>
         </Dock>
