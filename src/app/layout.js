@@ -8,8 +8,10 @@ import HeroSkeleton from '@/components/HeroSkeleton'
 
 export default function RootLayout({ children }) {
   const [isLoading, setIsLoading] = useState(true)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
     const handleLoad = () => {
       setIsLoading(false)
     }
@@ -25,13 +27,17 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`flex flex-col min-h-screen bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark ${isLoading ? 'opacity-0' : 'opacity-100 transition-opacity duration-500'}`}>
-        <ThemeProvider attribute="class">
-          <Navbar />
-          {isLoading ? (
-            <HeroSkeleton />
-          ) : (
-            <main className="flex-grow">{children}</main>
+      <body className="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {mounted && (
+            <div className={`flex flex-col min-h-screen ${isLoading ? 'opacity-0' : 'opacity-100 transition-opacity duration-500'}`}>
+              <Navbar />
+              {isLoading ? (
+                <HeroSkeleton />
+              ) : (
+                <main className="flex-grow">{children}</main>
+              )}
+            </div>
           )}
         </ThemeProvider>
       </body>

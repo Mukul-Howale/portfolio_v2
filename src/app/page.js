@@ -6,7 +6,7 @@ import ContactMe from '@/components/ContactMe'
 
 export default function Home() {
   return (
-    <main>
+    <main className="min-h-screen">
       <section id="home">
         <Hero />
       </section>
