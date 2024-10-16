@@ -2,7 +2,7 @@ import React from 'react'
 import Hero from '@/components/Hero'
 import About from '@/components/About'
 import ProjectGrid from '@/components/ProjectGrid'
-import ContactForm from '@/components/ContactForm'
+// import ContactForm from '@/components/ContactMe'
 
 export default function Home() {
   return (
@@ -16,9 +16,9 @@ export default function Home() {
       <section id="projects">
         <ProjectGrid />
       </section>
-      <section id="contact">
+      {/* <section id="contact">
         <ContactForm />
-      </section>
+      </section> */}
     </main>
   )
 }
