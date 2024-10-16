@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react'
 import { ThemeProvider } from 'next-themes'
 import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
 import '@/styles/global.css'
 
 export default function RootLayout({ children }) {
@@ -29,7 +28,6 @@ export default function RootLayout({ children }) {
         <ThemeProvider attribute="class">
           <Navbar />
           <main className="flex-grow">{children}</main>
-          <Footer />
         </ThemeProvider>
       </body>
     </html>

@@ -1,6 +1,7 @@
 'use client'
 
 import ProjectCard from '@/components/ProjectCard'
+import { BlurFade } from './BlurFade'
 
 export default function ProjectGrid() {
   const projects = [
@@ -24,10 +25,14 @@ export default function ProjectGrid() {
   return (
     <section className="py-20 bg-background-light dark:bg-background-dark">
       <div className="max-w-screen-xl mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-12 text-center text-text-light dark:text-text-dark">My Projects</h2>
+        <BlurFade>
+          <h2 className="text-4xl font-bold mb-12 text-center text-text-light dark:text-text-dark">My Projects</h2>
+        </BlurFade>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
+            <BlurFade key={index} delay={0.2 * index}>
+              <ProjectCard {...project} />
+            </BlurFade>
           ))}
         </div>
       </div>
