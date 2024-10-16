@@ -49,7 +49,7 @@ export default function Navbar() {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-20 transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
-      <div className="flex justify-center py-4">
+      <div className="flex justify-center">
         <Dock
           direction="middle"
           className={`shadow-md dark:shadow-[0_4px_6px_-1px_rgba(255,255,255,0.1),0_2px_4px_-1px_rgba(255,255,255,0.06)] bg-white/80 dark:bg-black/80 backdrop-blur-sm border-0 dark:border-0`}

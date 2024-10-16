@@ -1,13 +1,28 @@
+import React from 'react';
+
+const Skill = ({ name }) => (
+  <span className="bg-gray-800 text-white px-4 py-2 rounded-full text-sm font-semibold m-1 inline-block">
+    {name}
+  </span>
+);
+
 export default function Skills() {
-    return (
-      <section className="bg-background-light dark:bg-background-dark">
-        <div className="max-w-3xl mx-auto px-4">
-          <div className="flex flex-col items-center mb-20">
-            <div className="flex flex-col">
-                <h3 className="text-3xl font-bold mt-16 text-center text-text-light dark:text-text-dark">Skills & Technologies</h3>
-            </div>
-          </div>
+  const skills = [
+    'Java', 'Spring-Boot', 'HTML', 'CSS', 'Javascript', 'Postgres', 'Docker',
+    'Kubernetes', 'kafka', 'Keycloak', 'Prometheus', 'Grafana', 'Loki',
+    'Redis', 'MongoDB', 'Eureka', 'Zipkin', 'Resilience4j', 'Flyway', 'Git'
+  ];
+
+  return (
+    <section className="py-20 bg-background-light dark:bg-background-dark">
+      <div className="max-w-3xl mx-auto px-4">
+        <h2 className="text-2xl font-bold mb-8 text-center text-text-light dark:text-text-dark">Skills & Technologies</h2>
+        <div className="flex flex-wrap justify-center">
+          {skills.map((skill, index) => (
+            <Skill key={index} name={skill} />
+          ))}
         </div>
-      </section>
-    )
+      </div>
+    </section>
+  );
 }

@@ -4,6 +4,7 @@ import React from 'react'
 import Hero from '@/components/Hero'
 import About from '@/components/About'
 import Experience from '@/components/Experience'
+import Education from '@/components/Education'
 import Skills from '@/components/Skills'
 import ProjectGrid from '@/components/ProjectGrid'
 import ContactMe from '@/components/ContactMe'
@@ -27,18 +28,23 @@ export default function Home() {
         <Experience />
         </BlurFade>
       </section>
-      <section id="skills">
+      <section id="education">
       <BlurFade delay={1.1}>
+        <Education />
+        </BlurFade>
+      </section>
+      <section id="skills">
+      <BlurFade delay={1.4}>
         <Skills />
         </BlurFade>
       </section>
       <section id="projects">
-      <BlurFade delay={1.4}>
+      <BlurFade delay={1.7}>
         <ProjectGrid />
         </BlurFade>
       </section>
       <section id="contact">
-      <BlurFade delay={1.7}>
+      <BlurFade delay={2.0}>
         <ContactMe />
         </BlurFade>
       </section>
