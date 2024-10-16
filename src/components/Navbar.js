@@ -16,9 +16,6 @@ export default function Navbar() {
 
   const navItems = [
     { name: 'Home', icon: Home, href: '#home' },
-    { name: 'About', icon: User, href: '#about' },
-    { name: 'Projects', icon: Briefcase, href: '#projects' },
-    { name: 'Contact', icon: Mail, href: '#contact' },
   ]
 
   const socialItems = [

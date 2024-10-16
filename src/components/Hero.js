@@ -1,43 +1,25 @@
-'use client'
-
 import Image from 'next/image'
-import { useTheme } from 'next-themes'
-import { BlurFade } from './BlurFade'
 
 export default function Hero() {
-  const { theme } = useTheme()
-
   return (
-    <div className="relative h-screen flex items-center justify-center overflow-hidden bg-background-light dark:bg-background-dark">
-      <div className="z-10 text-center">
-        <BlurFade delay={0.2}>
+    <section className="relative h-84 mt-24 flex items-center justify-center overflow-hidden bg-background-light dark:bg-background-dark">
+      <div className="z-10 flex flex-row items-center justify-center w-full max-w-3xl px-4">
           <Image
             src="/images/profile-picture.jpg"
             alt="Profile Picture"
-            width={150}
-            height={150}
-            className="rounded-full mx-auto mb-8"
+            width={300}
+            height={300}
+            className="rounded-full mx-auto"
           />
-        </BlurFade>
-        <BlurFade delay={0.4}>
-          <h1 className="text-5xl font-bold mb-4 text-text-light dark:text-text-dark">
-            Mukul Howale
-          </h1>
-        </BlurFade>
-        <BlurFade delay={0.6}>
-          <p className="text-2xl mb-8 text-text-light dark:text-text-dark">
-            Software Developer
-          </p>
-        </BlurFade>
-        <BlurFade delay={0.8}>
-          <a
-            href="#contact"
-            className="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-6 rounded-full transition duration-300"
-          >
-            Get in Touch
-          </a>
-        </BlurFade>
+        <div className="w-4/2 pl-12 text-left">
+            <h1 className="text-5xl font-bold mb-4 text-text-light dark:text-text-dark">
+              Hi, I'm Mukul 👋
+            </h1>
+            <p className="text-xl text-text-darkGrey dark:text-text-lightGrey">
+              I'm a Software Developer who love to build things.
+            </p>
+        </div>
       </div>
-    </div>
+    </section>
   )
 }

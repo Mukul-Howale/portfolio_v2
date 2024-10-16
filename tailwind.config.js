@@ -29,11 +29,13 @@ module.exports = {
         text: {
           light: '#000000',
           dark: '#FFFFFF',
+          lightGrey:'#cacaca',
+          darkGrey:'#6c6c6c'
         },
         primary: '#3B82F6', // Blue color for primary elements
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['var(--font-sans)', 'ui-sans-serif', 'system-ui', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Noto Color Emoji"'],
       },
     },
   },
