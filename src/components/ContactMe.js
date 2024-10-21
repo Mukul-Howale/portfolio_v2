@@ -14,8 +14,8 @@ const ContactMe = () => {
   }, []);
 
   return (
-    <section className="my-24 bg-background-light dark:bg-background-dark">
-      <div className="max-w-3xl mx-auto px-4">
+    <section className="bg-background-light dark:bg-background-dark max-w-2xl mx-auto my-24">
+      <div className="mx-auto px-4">
         <h2 className="text-2xl font-bold mb-16 text-center text-text-light dark:text-text-dark">Contact</h2>
         <div className="flex flex-col items-center text-center space-y-12">
           <div className="mb-8 max-w-2xl">

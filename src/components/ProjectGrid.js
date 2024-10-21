@@ -22,8 +22,8 @@ export default function ProjectGrid() {
   ]
 
   return (
-    <section className="bg-background-light dark:bg-background-dark">
-      <div className="max-w-3xl mx-auto px-4">
+    <section className="bg-background-light dark:bg-background-dark max-w-2xl mx-auto mt-14">
+      <div className="mx-auto px-4">
           <h2 className="text-2xl font-bold mb-12 text-center text-text-light dark:text-text-dark">Projects</h2>
           <div className="mb-14 text-center">
           <h3 className="text-6xl font-bold mb-6 text-text-light dark:text-text-dark">Check out my work!</h3>
@@ -32,7 +32,7 @@ export default function ProjectGrid() {
                 to complex web application. Hope you guys like it.
               </p>
           </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
               <ProjectCard {...project} />
           ))}

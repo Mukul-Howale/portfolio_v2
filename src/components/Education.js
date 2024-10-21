@@ -17,8 +17,8 @@ const educations = [
 
 export default function Education() {
   return (
-    <section className="mt-14 bg-background-light dark:bg-background-dark">
-      <div className="max-w-3xl mx-auto px-4">
+    <section className="bg-background-light dark:bg-background-dark max-w-2xl mx-auto mt-14">
+      <div className="mx-auto px-4">
         <h2 className="text-2xl font-bold mb-8 text-center text-text-light dark:text-text-dark">Education</h2>
         <div className="space-y-8">
           {educations.map((edu, index) => (

@@ -22,11 +22,11 @@ function ParticlesWithTheme() {
   return (
     <Particles
       className="absolute inset-0 -z-10"
-      quantity={500}
+      quantity={200}
       ease={80}
-      // staticity={50}
+      staticity={50}
       color={particleColor}
-      // size={1}  // Increased size for better visibility
+      size={1}  // Increased size for better visibility
       refresh
     />
   )

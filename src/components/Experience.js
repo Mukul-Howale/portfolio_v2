@@ -17,8 +17,8 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section className="bg-background-light dark:bg-background-dark">
-      <div className="max-w-3xl mx-auto px-4">
+    <section className="bg-background-light dark:bg-background-dark max-w-2xl mx-auto">
+      <div className="mx-auto px-4">
         <h2 className="text-2xl font-bold mb-8 text-center text-text-light dark:text-text-dark">Work Experience</h2>
         <div className="space-y-8">
           {experiences.map((exp, index) => (
