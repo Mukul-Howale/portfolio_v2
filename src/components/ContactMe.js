@@ -19,7 +19,7 @@ const ContactMe = () => {
         <h2 className="text-xl font-bold mb-6 text-center text-text-light dark:text-text-dark">Contact</h2>
         <div className="flex flex-col items-center text-center space-y-12">
           <div className="mb-8 max-w-2xl">
-            <h3 className="text-6xl font-bold mb-6 text-text-light dark:text-text-dark">Let's Collaborate!</h3>
+            <h3 className="text-6xl font-bold mb-6 text-text-light dark:text-text-dark">Let&apos;s Collaborate!</h3>
             <p className="text-lg text-text-darkGrey dark:text-text-lightGrey">
               Working in a collaborative environment is the best and I love it. If you have some work for me, here is my {' '}
               <span 

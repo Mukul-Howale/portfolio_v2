@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
-import { Home, User, Briefcase, Mail, Sun, Moon, Github, Linkedin, FileText } from 'lucide-react'
+import { Home, Sun, Moon, Github, Linkedin, FileText } from 'lucide-react'
 import { Dock, DockIcon } from './Dock'
 
 const Separator = () => (

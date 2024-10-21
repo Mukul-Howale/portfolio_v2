@@ -13,10 +13,10 @@ export default function Hero() {
           />
         <div className="w-4/2 pl-12 text-left">
             <h1 className="text-5xl font-bold mb-4 text-text-light dark:text-text-dark">
-              Hi, I'm Mukul 👋
+              Hi, I&apos;m Mukul 👋
             </h1>
             <p className="text-xl text-text-darkGrey dark:text-text-lightGrey">
-              I'm a Software Developer who love to build things.
+              I&apos;m a Software Developer who love to build things.
             </p>
         </div>
       </div>

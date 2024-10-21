@@ -2,7 +2,6 @@
 
 import { cn } from "@/lib/utils";
 import React, { useEffect, useRef, useState } from "react";
-import { useTheme } from 'next-themes';
 
 function MousePosition() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -50,7 +49,7 @@ const Particles = ({
   vx = 0,
   vy = 0,
 }) => {
-  const { theme } = useTheme();
+//   const { theme } = useTheme();
   const canvasRef = useRef(null);
   const canvasContainerRef = useRef(null);
   const context = useRef(null);
