@@ -16,7 +16,7 @@ const ContactMe = () => {
   return (
     <section className="bg-background-light dark:bg-background-dark max-w-2xl mx-auto my-24">
       <div className="mx-auto px-4">
-        <h2 className="text-2xl font-bold mb-16 text-center text-text-light dark:text-text-dark">Contact</h2>
+        <h2 className="text-xl font-bold mb-6 text-center text-text-light dark:text-text-dark">Contact</h2>
         <div className="flex flex-col items-center text-center space-y-12">
           <div className="mb-8 max-w-2xl">
             <h3 className="text-6xl font-bold mb-6 text-text-light dark:text-text-dark">Let's Collaborate!</h3>

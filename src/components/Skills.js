@@ -14,9 +14,9 @@ export default function Skills() {
   ];
 
   return (
-    <section className="bg-background-light dark:bg-background-dark max-w-2xl mx-auto mt-14">
+    <section className="bg-background-light dark:bg-background-dark max-w-2xl mx-auto mt-16">
       <div className="mx-auto px-4">
-        <h2 className="text-2xl font-bold mb-8 text-center text-text-light dark:text-text-dark">Skills & Technologies</h2>
+        <h2 className="text-xl font-bold mb-8 text-center text-text-light dark:text-text-dark">Skills & Technologies</h2>
         <div className="flex flex-wrap justify-center">
           {skills.map((skill, index) => (
             <Skill key={index} name={skill} />

@@ -17,9 +17,9 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section className="bg-background-light dark:bg-background-dark max-w-2xl mx-auto">
+    <section className="bg-background-light dark:bg-background-dark max-w-2xl mx-auto mt-16">
       <div className="mx-auto px-4">
-        <h2 className="text-2xl font-bold mb-8 text-center text-text-light dark:text-text-dark">Work Experience</h2>
+        <h2 className="text-xl font-bold mb-6 text-center text-text-light dark:text-text-dark">Work Experience</h2>
         <div className="space-y-8">
           {experiences.map((exp, index) => (
             <div key={index} className="flex items-center space-x-4">
@@ -33,7 +33,7 @@ export default function Experience() {
                 />
               </div>
               <div className="flex-grow">
-                <h3 className="text-xl font-semibold text-text-light dark:text-text-dark">{exp.company}</h3>
+                <h3 className="text-l font-semibold text-text-light dark:text-text-dark">{exp.company}</h3>
                 <p className="text-text-darkGrey dark:text-text-lightGrey">{exp.role}</p>
               </div>
               <div className="text-right text-text-darkGrey dark:text-text-lightGrey">
