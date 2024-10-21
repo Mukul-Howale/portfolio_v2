@@ -32,7 +32,7 @@ export default function ProjectCard({ title, description, image, technologies, l
             href={liveLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-2 rounded transition duration-300 ml-6"
+            className="inline-block bg-primary hover:bg-primary-dark text-white font-bold py-2 px-2 rounded transition duration-300 ml-6"
           >
             Check Live
           </a>
