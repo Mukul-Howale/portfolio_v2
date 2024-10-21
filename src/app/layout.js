@@ -1,16 +1,36 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { ThemeProvider } from 'next-themes'
+import { ThemeProvider, useTheme } from 'next-themes'
 import Navbar from '@/components/Navbar'
 import '@/styles/global.css'
 import HeroSkeleton from '@/components/HeroSkeleton'
 import { Inter } from 'next/font/google'
+import Particles from '@/components/Particles'
 
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
 })
+
+function ParticlesWithTheme() {
+  const { theme } = useTheme()
+  
+  // Use more visible colors for particles
+  const particleColor = theme === 'dark' ? "#ffffff" : "#000000"
+
+  return (
+    <Particles
+      className="absolute inset-0 -z-10"
+      quantity={500}
+      ease={80}
+      // staticity={50}
+      color={particleColor}
+      // size={1}  // Increased size for better visibility
+      refresh
+    />
+  )
+}
 
 export default function RootLayout({ children }) {
   const [isLoading, setIsLoading] = useState(true)
@@ -41,7 +61,10 @@ export default function RootLayout({ children }) {
               {isLoading ? (
                 <HeroSkeleton />
               ) : (
-                <main className="flex-grow">{children}</main>
+                <main className="flex-grow relative">
+                  <ParticlesWithTheme />
+                  {children}
+                </main>
               )}
             </div>
           )}
