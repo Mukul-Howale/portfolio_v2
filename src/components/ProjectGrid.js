@@ -16,7 +16,7 @@ export default function ProjectGrid() {
       title: 'Expedia Clone',
       description: 'A travel booking website where a user can plan their entire journey. A colaborative project completed in 6 days with a team of 3 members.',
       image: '/images/expedia_clone_png.png',
-      technologies: ['TML5', 'CSS3', 'JS', 'Json Server'],
+      technologies: ['HTML5', 'CSS3', 'JS', 'Json Server'],
       link: 'https://github.com/MukulHowale/expedia-clone',
       liveLink: 'https://expediaclone.netlify.app/',
     },

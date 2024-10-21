@@ -6,7 +6,7 @@ export default function ProjectCard({ title, description, image, technologies, l
     <motion.div
       whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.3 }}
-      className="bg-background-light dark:bg-background-dark rounded-lg overflow-hidden shadow-lg"
+      className="bg-background-light dark:bg-background-dark rounded-lg overflow-hidden border border-gray-300 dark:border-gray-700 shadow-[0_0_20px_rgba(0,0,0,0.1)] dark:shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_25px_rgba(0,0,0,0.2)] dark:hover:shadow-[0_0_25px_rgba(255,255,255,0.2)] transition-shadow duration-300"
     >
       <Image src={image} alt={title} width={400} height={200} className="w-full object-cover h-48" />
       <div className="p-6">
@@ -14,7 +14,7 @@ export default function ProjectCard({ title, description, image, technologies, l
         <p className="text-l text-text-darkGrey dark:text-text-lightGrey mb-4">{description}</p>
         <div className="flex flex-wrap gap-2 mb-4">
           {technologies.map((tech, index) => (
-            <span key={index} className="bg-background-dark dark:bg-background-light text-text-dark dark:text-text-light text-sm rounded-full px-3 py-1">
+            <span key={index} className="bg-gray-800 text-white text-sm rounded-full px-3 py-1">
               {tech}
             </span>
           ))}
