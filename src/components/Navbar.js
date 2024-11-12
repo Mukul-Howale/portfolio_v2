@@ -19,9 +19,9 @@ export default function Navbar() {
   ]
 
   const socialItems = [
-    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/in/yourusername' },
-    { name: 'Resume', icon: FileText, href: '/path-to-your-resume.pdf' },
-    { name: 'GitHub', icon: Github, href: 'https://github.com/yourusername' },
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/in/mukulhowale/' },
+    { name: 'Resume', icon: FileText, href: 'https://drive.google.com/drive/folders/177s2SRrseWBPnPkgeZPW11u6XaNX0e4l?usp=sharing' },
+    { name: 'GitHub', icon: Github, href: 'https://github.com/Mukul-Howale' },
   ]
 
   const toggleTheme = () => {

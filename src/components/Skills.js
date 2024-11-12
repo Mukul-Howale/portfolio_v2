@@ -8,10 +8,12 @@ const Skill = ({ name }) => (
 
 export default function Skills() {
   const skills = [
-    'Java', 'Spring-Boot', 'HTML', 'CSS', 'Javascript', 'Postgres', 'Docker',
-    'Kubernetes', 'kafka', 'Keycloak', 'Prometheus', 'Grafana', 'Loki',
-    'Redis', 'MongoDB', 'Eureka', 'Zipkin', 'Resilience4j', 'Flyway', 'Git'
+    'Java', 'Spring-Boot', 'C#', '.NET Framework', 'SQL', 'Microservices', 'HTML', 'CSS', 'Javascript', 'Postgres', 'Docker',
+    'Kubernetes', 'Git'
   ];
+
+  // 'AWS', 'kafka', 'Keycloak', 'Prometheus', 'Grafana', 'Loki',
+  //   'Redis', 'MongoDB', 'Eureka', 'Zipkin', 'Resilience4j', 'Flyway',
 
   return (
     <section className="bg-background-light dark:bg-background-dark max-w-2xl mx-auto mt-16">
